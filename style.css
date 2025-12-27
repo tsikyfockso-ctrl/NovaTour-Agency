@@ -1,43 +1,94 @@
-/* GLOBAL */
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f4f4f4;color:#333}
+/* style.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
 
-/* HEADER */
-header{background:#007bff;padding:15px 20px;color:white}
-nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.logo-container{display:flex;align-items:center}
-.logo{height:50px;margin-right:10px}
-nav h2{font-size:24px}
-.nav-right{display:flex;align-items:center;gap:15px}
-.nav-links{display:flex;flex-wrap:wrap}
-.nav-links a{color:white;text-decoration:none;margin-left:15px;font-weight:bold}
+header {
+  background-color: #0056b3;
+  color: #fff;
+  padding: 10px 20px;
+}
 
-/* LANGUAGE SELECTOR */
-.lang-switch select{padding:6px 10px;border-radius:5px;border:none;font-weight:bold;cursor:pointer}
+header .logo-container {
+  display: flex;
+  align-items: center;
+}
 
-/* HERO */
-.hero{background:#e9f1ff;padding:60px 20px;display:flex;justify-content:center}
-.hero-box{background:white;max-width:700px;width:100%;padding:30px;border-radius:15px;text-align:center;box-shadow:0 5px 20px rgba(0,0,0,0.15)}
-.hero-image{width:100%;max-height:250px;object-fit:cover;border-radius:12px;margin-bottom:20px}
-.hero-box h1{font-size:32px;margin-bottom:10px}
-.hero-box p{margin-bottom:20px;font-size:16px}
-.btn{background:#ffcc00;color:black;padding:12px 25px;text-decoration:none;border-radius:6px;font-weight:bold}
+header .logo {
+  height: 50px;
+  margin-right: 10px;
+}
 
-/* SECTIONS */
-section{padding:50px 20px}
-section h2{text-align:center;margin-bottom:30px}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/* CARDS */
-.services,.offers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
-.card{background:white;padding:20px;border-radius:10px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
 
-/* FORM */
-form{max-width:400px;margin:auto}
-form input,form textarea{width:100%;padding:10px;margin-bottom:15px;border-radius:5px;border:1px solid #ccc}
-form button{width:100%;padding:12px;background:#007bff;color:white;border:none;font-weight:bold;border-radius:5px}
+.lang-switch select {
+  padding: 5px;
+}
 
-/* FOOTER */
-footer{background:#333;color:white;text-align:center;padding:20px}
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #e1f0ff;
+}
 
-/* RESPONSIVE */
-@media(max-width:768px){.nav-links{width:100%;justify-content:center;margin-top:10px}nav h2{font-size:20px}}
+.hero-box {
+  display: inline-block;
+  max-width: 800px;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff5a5f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services, .offers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 150px;
+  flex: 1;
+}
+
+footer {
+  background-color: #0056b3;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
