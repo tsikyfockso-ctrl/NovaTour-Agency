@@ -1,4 +1,3 @@
-// sw.js
 const CACHE_NAME = 'novatour-cache-v1';
 const urlsToCache = [
   './index.html',
