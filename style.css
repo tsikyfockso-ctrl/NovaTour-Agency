@@ -12,55 +12,48 @@ header {
   color: #fff;
   padding: 10px 20px;
 }
-
-.header-container {
+.nav-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
-.logo-title {
+/* Logo et titre */
+.logo-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
-.logo-title .logo {
-  max-height: 50px !important;
+.logo-container .logo {
+  max-height: 50px !important; /* logo réduit */
   width: auto !important;
   display: block;
 }
-
-.logo-title h2 {
+.logo-container h2 {
   margin: 0;
-  font-size: 28px;
+  font-size: 24px;
 }
 
-/* Menu horizontal sous le titre */
-.main-nav {
-  margin-top: 10px;
+/* Menu */
+.nav-right {
   display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
-
-.main-nav a {
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+.nav-links a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
 }
-
-.main-nav a:hover {
+.nav-links a:hover {
   text-decoration: underline;
 }
 
-/* Langue sous le menu */
-.lang-switch {
-  margin-top: 10px;
-}
-
+/* Sélecteur de langue */
 .lang-switch select {
   padding: 5px;
 }
