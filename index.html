@@ -21,34 +21,32 @@
 <body>
 
 <header>
-  <nav class="nav-container">
-    <div class="logo-container">
+  <div class="header-container">
+    <div class="logo-title">
       <img src="logo.png" alt="NovaTourAgency Logo" class="logo">
       <h2>NovaTourAgency</h2>
     </div>
-    <div class="nav-right">
-      <div class="nav-links">
-        <a href="#home" data-fr="Accueil" data-en="Home">Accueil</a>
-        <a href="#services" data-fr="Services" data-en="Services">Services</a>
-        <a href="#offers" data-fr="Offres" data-en="Offers">Offres</a>
-        <a href="#affiliation" data-fr="Affiliation" data-en="Affiliate">Affiliation</a>
-        <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
-      </div>
-      <div class="lang-switch">
-        <select onchange="setLang(this.value)">
-          <option value="fr">Français</option>
-          <option value="en">English</option>
-          <option value="es">Español</option>
-          <option value="de">Deutsch</option>
-          <option value="it">Italiano</option>
-          <option value="pt">Português</option>
-          <option value="zh">中文</option>
-          <option value="ar">العربية</option>
-          <option value="ru">Русский</option>
-        </select>
-      </div>
+    <nav class="main-nav">
+      <a href="#home" data-fr="Accueil" data-en="Home">Accueil</a>
+      <a href="#services" data-fr="Services" data-en="Services">Services</a>
+      <a href="#offers" data-fr="Offres" data-en="Offers">Offres</a>
+      <a href="#affiliation" data-fr="Affiliation" data-en="Affiliate">Affiliation</a>
+      <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+    </nav>
+    <div class="lang-switch">
+      <select onchange="setLang(this.value)">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="de">Deutsch</option>
+        <option value="it">Italiano</option>
+        <option value="pt">Português</option>
+        <option value="zh">中文</option>
+        <option value="ar">العربية</option>
+        <option value="ru">Русский</option>
+      </select>
     </div>
-  </nav>
+  </div>
 </header>
 
 <section id="home" class="hero">
