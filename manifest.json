@@ -3,8 +3,8 @@
   "short_name": "NovaTour",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#007bff",
+  "background_color": "#0056b3",
+  "theme_color": "#0056b3",
   "icons": [
     {
       "src": "favicon.png",
