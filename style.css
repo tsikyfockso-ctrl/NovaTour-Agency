@@ -6,38 +6,58 @@ body {
   color: #333;
 }
 
+/* Header */
 header {
   background-color: #0056b3;
   color: #fff;
   padding: 10px 20px;
 }
 
-header .logo-container {
-  display: flex;
-  align-items: center;
-}
-
-header .logo {
-  height: 50px;
-  margin-right: 10px;
-}
-
-header nav {
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Logo et titre */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container h2 {
+  margin: 0;
+}
+
+/* Menu à droite du logo */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  margin: 0 10px;
+  font-weight: bold;
 }
 
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Sélecteur de langue */
 .lang-switch select {
   padding: 5px;
 }
 
+/* Hero */
 .hero {
   text-align: center;
   padding: 50px 20px;
@@ -66,12 +86,17 @@ header nav {
   margin-top: 10px;
 }
 
+.btn:hover {
+  background-color: #e04e52;
+}
+
+/* Sections */
 section {
   padding: 40px 20px;
   text-align: center;
 }
 
-.services, .offers {
+.services, .offers, .affiliate-section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -86,9 +111,58 @@ section {
   flex: 1;
 }
 
+/* Contact */
+#contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#contact textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#contact button {
+  padding: 12px 20px;
+  background-color: #ff5a5f;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#contact button:hover {
+  background-color: #e04e52;
+}
+
+/* Footer */
 footer {
   background-color: #0056b3;
   color: #fff;
   padding: 20px;
   text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
