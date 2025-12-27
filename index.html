@@ -31,7 +31,7 @@
 <body>
 
 <header>
-  <nav>
+  <nav class="nav-container">
     <div class="logo-container">
       <img src="logo.png" alt="NovaTourAgency Logo" class="logo">
       <h2>NovaTourAgency</h2>
@@ -114,9 +114,9 @@
 <section id="contact">
   <h2 data-fr="Contact" data-en="Contact">Contact</h2>
   <form>
-    <input type="text" placeholder="Nom / Name" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Message" required></textarea>
+    <input type="text" name="name" placeholder="Nom / Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message" required></textarea>
     <button type="submit" data-fr="Envoyer" data-en="Send">Envoyer</button>
   </form>
 </section>
@@ -131,7 +131,6 @@
 
 <script src="lang.js"></script>
 
-<!-- Service Worker -->
 <script>
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register('./sw.js')
