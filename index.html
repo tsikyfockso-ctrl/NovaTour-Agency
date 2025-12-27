@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <title>NovaTourAgency</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,60 +19,110 @@
 <header>
   <nav>
     <div class="logo-container">
-      <img src="./logo.png" alt="NovaTourAgency Logo" class="logo">
+      <img src="logo.png" alt="NovaTourAgency Logo" class="logo">
       <h2>NovaTourAgency</h2>
     </div>
-    <div class="nav-links">
-      <a href="#home">Accueil</a>
-      <a href="#services">Services</a>
-      <a href="#offers">Offres</a>
-      <a href="#contact">Contact</a>
+
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#home" data-fr="Accueil" data-en="Home" data-es="Inicio" data-de="Start" data-it="Home" data-pt="Início" data-zh="首页" data-ar="الرئيسية" data-ru="Главная">Accueil</a>
+        <a href="#services" data-fr="Services" data-en="Services" data-es="Servicios" data-de="Dienstleistungen" data-it="Servizi" data-pt="Serviços" data-zh="服务" data-ar="الخدمات" data-ru="Услуги">Services</a>
+        <a href="#offers" data-fr="Offres" data-en="Offers" data-es="Ofertas" data-de="Angebote" data-it="Offerte" data-pt="Ofertas" data-zh="优惠" data-ar="العروض" data-ru="Предложения">Offres</a>
+        <a href="#contact" data-fr="Contact" data-en="Contact" data-es="Contacto" data-de="Kontakt" data-it="Contatto" data-pt="Contato" data-zh="联系" data-ar="اتصل" data-ru="Контакты">Contact</a>
+      </div>
+
+      <!-- Language selector -->
+      <div class="lang-switch">
+        <select onchange="setLang(this.value)">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="de">Deutsch</option>
+          <option value="it">Italiano</option>
+          <option value="pt">Português</option>
+          <option value="zh">中文</option>
+          <option value="ar">العربية</option>
+          <option value="ru">Русский</option>
+        </select>
+      </div>
     </div>
   </nav>
 </header>
 
+<!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Voyagez avec confiance</h1>
-    <p>Billets, hôtels et circuits touristiques</p>
-    <a href="https://wa.me/261349582764" class="btn">Réserver sur WhatsApp</a>
+  <div class="hero-box">
+    <img src="image.jpg" alt="Travel image" class="hero-image">
+    <h1 data-fr="Voyagez avec confiance" data-en="Travel with confidence" data-es="Viaja con confianza" data-de="Reisen Sie mit Vertrauen" data-it="Viaggia con fiducia" data-pt="Viaje com confiança" data-zh="放心旅行" data-ar="سافر بثقة" data-ru="Путешествуйте с уверенностью">Voyagez avec confiance</h1>
+    <p data-fr="Billets, hôtels et circuits touristiques" data-en="Flights, hotels and tour packages" data-es="Vuelos, hoteles y paquetes turísticos" data-de="Flüge, Hotels und Tourpakete" data-it="Voli, hotel e pacchetti turistici" data-pt="Voos, hotéis e pacotes turísticos" data-zh="机票、酒店和旅游套餐" data-ar="تذاكر، فنادق وحزم سياحية" data-ru="Билеты, отели и туристические пакеты">Billets, hôtels et circuits touristiques</p>
+    <a href="https://wa.me/261349582764" class="btn" data-fr="Réserver sur WhatsApp" data-en="Book on WhatsApp" data-es="Reservar en WhatsApp" data-de="Bei WhatsApp buchen" data-it="Prenota su WhatsApp" data-pt="Reserve no WhatsApp" data-zh="在WhatsApp预订" data-ar="احجز على واتساب" data-ru="Забронировать на WhatsApp">Réserver sur WhatsApp</a>
   </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
-  <h2>Nos Services</h2>
+  <h2 data-fr="Nos Services" data-en="Our Services" data-es="Nuestros Servicios" data-de="Unsere Dienstleistungen" data-it="I nostri servizi" data-pt="Nossos Serviços" data-zh="我们的服务" data-ar="خدماتنا" data-ru="Наши услуги">Nos Services</h2>
   <div class="services">
-    <div class="card">✈️ Réservation de billets</div>
-    <div class="card">🏨 Hôtels & hébergement</div>
-    <div class="card">🗺️ Circuits touristiques</div>
-    <div class="card">📄 Visa & assistance</div>
+    <div class="card" data-fr="✈️ Réservation de billets" data-en="✈️ Flight booking" data-es="✈️ Reserva de vuelos" data-de="✈️ Flugbuchung" data-it="✈️ Prenotazione voli" data-pt="✈️ Reserva de voos" data-zh="✈️ 机票预订" data-ar="✈️ حجز الرحلات" data-ru="✈️ Бронирование билетов">✈️ Réservation de billets</div>
+    <div class="card" data-fr="🏨 Hôtels et hébergement" data-en="🏨 Hotels and accommodation" data-es="🏨 Hoteles y alojamiento" data-de="🏨 Hotels und Unterkunft" data-it="🏨 Hotel e alloggio" data-pt="🏨 Hotéis e hospedagem" data-zh="🏨 酒店和住宿" data-ar="🏨 الفنادق والإقامة" data-ru="🏨 Отели и проживание">🏨 Hôtels et hébergement</div>
+    <div class="card" data-fr="🗺️ Circuits touristiques" data-en="🗺️ Tour packages" data-es="🗺️ Paquetes turísticos" data-de="🗺️ Tour-Pakete" data-it="🗺️ Pacchetti turistici" data-pt="🗺️ Pacotes turísticos" data-zh="🗺️ 旅游套餐" data-ar="🗺️ الجولات السياحية" data-ru="🗺️ Туристические пакеты">🗺️ Circuits touristiques</div>
+    <div class="card" data-fr="📄 Visa et assistance" data-en="📄 Visa and assistance" data-es="📄 Visa y asistencia" data-de="📄 Visum und Unterstützung" data-it="📄 Visto e assistenza" data-pt="📄 Visto e assistência" data-zh="📄 签证和协助" data-ar="📄 تأشيرة ومساعدة" data-ru="📄 Виза и поддержка">📄 Visa et assistance</div>
   </div>
 </section>
 
+<!-- OFFERS -->
 <section id="offers">
-  <h2>Offres Spéciales</h2>
+  <h2 data-fr="Offres Spéciales" data-en="Special Offers" data-es="Ofertas Especiales" data-de="Sonderangebote" data-it="Offerte Speciali" data-pt="Ofertas Especiais" data-zh="特价优惠" data-ar="العروض الخاصة" data-ru="Специальные предложения">Offres Spéciales</h2>
   <div class="offers">
-    <div class="card">Antananarivo – Paris</div>
-    <div class="card">Madagascar Tour</div>
-    <div class="card">Dubaï Promo</div>
+    <div class="card" data-fr="Antananarivo – Paris" data-en="Antananarivo – Paris">Antananarivo – Paris</div>
+    <div class="card" data-fr="Madagascar Tour" data-en="Madagascar Tour">Madagascar Tour</div>
+    <div class="card" data-fr="Dubaï Promo" data-en="Dubai Promo">Dubaï Promo</div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
-  <h2>Contact</h2>
+  <h2 data-fr="Contact" data-en="Contact">Contact</h2>
   <form>
-    <input type="text" placeholder="Votre nom" required>
-    <input type="email" placeholder="Votre email" required>
-    <textarea placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
+    <input type="text" placeholder="Nom / Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message" required></textarea>
+    <button type="submit" data-fr="Envoyer" data-en="Send">Envoyer</button>
   </form>
 </section>
 
 <footer>
-  <p>© 2025 NovaTourAgency – Tous droits réservés</p>
+  <p data-fr="© 2025 NovaTourAgency – Tous droits réservés" data-en="© 2025 NovaTourAgency – All rights reserved">© 2025 NovaTourAgency – Tous droits réservés</p>
   <p>📞 +261 34 95 827 64</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- JS -->
+<script>
+// Changement langue
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-fr]').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if(text) el.textContent = text;
+  });
+  localStorage.setItem('lang', lang);
+}
+
+// Détection automatique
+window.onload = () => {
+  const savedLang = localStorage.getItem('lang');
+  const userLang = navigator.language.slice(0,2);
+  const supported = ['fr','en','es','de','it','pt','zh','ar','ru'];
+  setLang(savedLang || (supported.includes(userLang) ? userLang : 'fr'));
+};
+
+// Service Worker PWA
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('./sw.js')
+  .then(()=>console.log('SW Registered'))
+  .catch(err=>console.log('SW Error:', err));
+}
+</script>
+
 </body>
 </html>
