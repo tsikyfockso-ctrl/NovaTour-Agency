@@ -1,4 +1,3 @@
-// lang.js
 function setLang(lang) {
   document.querySelectorAll('[data-fr]').forEach(el => {
     if(lang === 'fr') el.innerText = el.getAttribute('data-fr');
