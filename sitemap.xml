@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Page principale -->
   <url>
     <loc>https://novatouragency.ddns.net/</loc>
     <priority>1.0</priority>
   </url>
+
+  <!-- Sections principales -->
+  <url>
+    <loc>https://novatouragency.ddns.net/#home</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://novatouragency.ddns.net/#services</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://novatouragency.ddns.net/#offers</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://novatouragency.ddns.net/#affiliation</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://novatouragency.ddns.net/#contact</loc>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
