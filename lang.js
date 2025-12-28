@@ -9,5 +9,6 @@ function setLang(lang) {
     else if(lang === 'zh') el.innerText = el.getAttribute('data-zh');
     else if(lang === 'ar') el.innerText = el.getAttribute('data-ar');
     else if(lang === 'ru') el.innerText = el.getAttribute('data-ru');
+    else if(lang === 'mg') el.innerText = el.getAttribute('data-mg');
   });
 }
