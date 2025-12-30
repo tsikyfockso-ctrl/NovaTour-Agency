@@ -268,6 +268,7 @@ footer {
   height: 40px;
   object-fit: contain;
   transition: transform 0.2s;
+  margin-top: -3px
   align-self: flex-end; /* décale le logo vers le bas par rapport au texte */
 }
 .social-icon:hover {
