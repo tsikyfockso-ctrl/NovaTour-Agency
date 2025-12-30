@@ -177,8 +177,8 @@ footer a:hover {
   }
 }
 .social-icon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: auto;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
@@ -186,4 +186,12 @@ footer a:hover {
 .social-icon:hover {
   transform: scale(1.2);
 }
+footer img.social-icon {
+  width: 24px !important;
+  height: auto !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  display: inline-block !important;
+}
+
 
