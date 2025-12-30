@@ -282,3 +282,77 @@ footer {
     max-width: 90%;
   }
 }
+/* ================= MOBILE HEADER FIX ================= */
+@media (max-width: 600px) {
+
+  header {
+    padding: 8px 10px;
+  }
+
+  .header-container {
+    gap: 6px;
+  }
+
+  .logo-title {
+    gap: 6px;
+  }
+
+  .logo {
+    width: 30px;   /* 🔒 taille mobile réelle */
+  }
+
+  .logo-title h1,
+  .logo-title h2 {
+    font-size: 18px;
+  }
+
+  /* NAVIGATION MOBILE */
+  .main-nav {
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .main-nav a {
+    font-size: 13px;
+    padding: 4px 0;
+  }
+
+  /* LANGUE */
+  .lang-switch {
+    margin-top: 4px;
+  }
+
+  .lang-switch select {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+}
+/* ===== TIQETS FIX ===== */
+#affiliation .affiliate-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#affiliation .affiliate-section h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+#affiliation .affiliate-text {
+  max-width: 600px;        /* 🔑 texte modéré */
+  margin: 0 auto 18px auto;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+#affiliation .btn-booking {
+  margin-top: 10px;
+  padding: 12px 26px;
+  font-size: 16px;
+  }
