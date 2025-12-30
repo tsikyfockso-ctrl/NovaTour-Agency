@@ -1,15 +1,22 @@
-body {
+/* ================= RESET ================= */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Header */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
 header {
-  background-color: #0056b3;
+  background: #0056b3;
   color: #fff;
-  padding: 10px 20px;
+  padding: 15px 20px;
 }
 
 .header-container {
@@ -21,23 +28,24 @@ header {
 .logo-title {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-.logo-title .logo {
-  max-height: 40px;  /* Logo réduit */
-  width: auto;
-  display: block;
+.logo {
+  width: 45px;            /* 🔒 taille verrouillée */
+  height: auto;
+  object-fit: contain;
 }
 
+.logo-title h1,
 .logo-title h2 {
-  margin: 0;
   font-size: 28px;
+  font-weight: bold;
 }
 
-/* Menu horizontal sous le titre */
+/* ================= NAVIGATION ================= */
 .main-nav {
-  margin-top: 10px;
+  margin-top: 12px;
   display: flex;
   gap: 25px;
   flex-wrap: wrap;
@@ -55,164 +63,107 @@ header {
   text-decoration: underline;
 }
 
-/* Langue sous le menu */
+/* ================= LANG SWITCH ================= */
 .lang-switch {
   margin-top: 10px;
 }
 
 .lang-switch select {
-  padding: 5px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
 }
 
-/* Hero */
+/* ================= HERO ================= */
 .hero {
-  text-align: center;
+  background: #e1f0ff;
   padding: 50px 20px;
-  background-color: #e1f0ff;
+  text-align: center;
 }
+
 .hero-box {
-  display: inline-block;
-  max-width: 800px;
+  max-width: 900px;
+  margin: auto;
 }
+
 .hero-image {
   width: 100%;
-  max-height: 400px;
+  max-height: 420px;
   object-fit: cover;
-  border-radius: 10px;
-}
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff5a5f;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-.btn:hover {
-  background-color: #e04e52;
+  border-radius: 12px;
 }
 
-/* Sections */
+.hero h1,
+.hero h2 {
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+.hero p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+/* ================= BUTTON ================= */
+.btn {
+  display: inline-block;
+  background: #ff5a5f;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #e04e52;
+  transform: scale(1.05);
+}
+
+/* ================= SECTIONS ================= */
 section {
-  padding: 40px 20px;
+  padding: 45px 20px;
   text-align: center;
 }
-.services, .offers, .affiliate-section {
+
+section h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+/* ================= CARDS ================= */
+.services,
+.offers {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  min-width: 150px;
-  flex: 1;
-}
-
-/* Contact */
-#contact form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-#contact input,
-#contact textarea {
-  width: 100%;
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  box-sizing: border-box;
-}
-#contact textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-#contact button {
-  padding: 12px 20px;
-  background-color: #ff5a5f;
-  color: #fff;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-#contact button:hover {
-  background-color: #e04e52;
-}
-
-/* Footer */
-footer {
-  background-color: #0056b3;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-footer a {
-  color: #fff;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive pour mobile */
-@media (max-width: 600px) {
-  .logo-title .logo {
-    max-height: 30px;
-  }
-
-  .logo-title h2 {
-    font-size: 22px;
-  }
-
-  .main-nav {
-    gap: 15px;
-  }
-}
-.social-icon {
-  width: 40px;
-  height: auto;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: scale(1.2);
-}
-footer img.social-icon {
-  width: 40px !important;
-  height: auto !important;
-  max-width: 40px !important;
-  max-height: 40px !important;
-  display: inline-block !important;
-}
-footer .facebook-wrapper img {
-  width: 40px !important;
-  height: 40px !important;
-  max-width: 40px !important;
-  max-height: 40px !important;
-  display: inline-block !important;
-  object-fit: contain !important;
-}
-.affiliate-section {
-  text-align: center;
-  margin: 30px 0;
-  padding: 20px;
-  background-color: #f7f7f7;
+  background: #fff;
+  padding: 25px;
   border-radius: 10px;
+  min-width: 220px;
+  max-width: 260px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+/* ================= AFFILIATION ================= */
+.affiliate-section {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .affiliate-section h3 {
   font-size: 24px;
   margin-bottom: 15px;
-  color: #333;
 }
 
 .affiliate-text {
@@ -223,49 +174,111 @@ footer .facebook-wrapper img {
 
 .btn-booking {
   display: inline-block;
-  padding: 12px 25px;
-  background-color: #1877f2;
+  padding: 14px 28px;
+  background: #007bff;
   color: #fff;
-  font-weight: bold;
+  border-radius: 8px;
   text-decoration: none;
-  border-radius: 6px;
+  font-weight: bold;
   transition: background 0.3s, transform 0.2s;
 }
 
 .btn-booking:hover {
-  background-color: #0d65d9;
+  background: #0056b3;
   transform: scale(1.05);
 }
-/* ================= FIX FOOTER FACEBOOK ================= */
-footer .facebook-wrapper {
-  text-align: center !important;
+
+.affiliate-section iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ================= CONTACT ================= */
+#contact form {
+  max-width: 520px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#contact textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#contact button {
+  background: #ff5a5f;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background: #e04e52;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #0056b3;
+  color: #fff;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.facebook-wrapper {
   margin-top: 15px;
 }
 
-footer .facebook-wrapper a {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important;
-  text-decoration: none !important;
+.facebook-wrapper a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
 
-footer .facebook-wrapper img {
-  width: 40px !important;       /* taille fixe */
-  height: 40px !important;
-  max-width: 40px !important;
-  max-height: 40px !important;
-  display: inline-block !important;
-  object-fit: contain !important;
-  vertical-align: middle !important;
+.social-icon {
+  width: 28px;           /* 🔒 verrouillé */
+  height: 28px;
+  object-fit: contain;
 }
 
-.facebook-wrapper .facebook-text {
-  color: #ffffff !important;    /* texte blanc */
-  font-size: 14px !important;
-  line-height: 40px !important; /* même hauteur que le logo */
-  font-weight: 500 !important;
-  display: inline-block !important;
-  text-align: left !important;
+.facebook-text {
+  font-size: 14px;
+  color: #fff;
 }
 
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .logo {
+    width: 36px;
+  }
+
+  .logo-title h1,
+  .logo-title h2 {
+    font-size: 22px;
+  }
+
+  .hero h1,
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+}
