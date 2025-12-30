@@ -262,7 +262,11 @@ footer {
     height: 40px;
     object-fit: contain;
 }
-
+.facebook-text {
+    color: white;              /* texte blanc */
+    font-weight: bold;         /* texte en gras */
+    font-size: 1rem;           /* taille du texte */
+}
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .logo {
