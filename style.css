@@ -193,3 +193,11 @@ footer img.social-icon {
   max-height: 40px !important;
   display: inline-block !important;
 }
+footer .facebook-wrapper img {
+  width: 40px !important;
+  height: 40px !important;
+  max-width: 40px !important;
+  max-height: 40px !important;
+  display: inline-block !important;
+  object-fit: contain !important;
+}
