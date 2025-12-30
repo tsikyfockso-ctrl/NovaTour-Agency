@@ -176,13 +176,14 @@ footer a:hover {
     gap: 15px;
   }
 }
-
 .social-icon {
-  width: 32px;      /* taille du logo */
-  height: 32px;
-  transition: transform 0.4s;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
 .social-icon:hover {
   transform: scale(1.2);
 }
+
