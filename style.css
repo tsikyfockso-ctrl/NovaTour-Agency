@@ -236,3 +236,36 @@ footer .facebook-wrapper img {
   background-color: #0d65d9;
   transform: scale(1.05);
 }
+/* ================= FIX FOOTER FACEBOOK ================= */
+footer .facebook-wrapper {
+  text-align: center !important;
+  margin-top: 15px;
+}
+
+footer .facebook-wrapper a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+}
+
+footer .facebook-wrapper img {
+  width: 40px !important;       /* taille fixe */
+  height: 40px !important;
+  max-width: 40px !important;
+  max-height: 40px !important;
+  display: inline-block !important;
+  object-fit: contain !important;
+  vertical-align: middle !important;
+}
+
+.facebook-wrapper .facebook-text {
+  color: #ffffff !important;    /* texte blanc */
+  font-size: 14px !important;
+  line-height: 40px !important; /* même hauteur que le logo */
+  font-weight: 500 !important;
+  display: inline-block !important;
+  text-align: left !important;
+}
+
