@@ -264,11 +264,11 @@ footer {
     color: #333;
 }
 .social-icon {
-  width: 28px;           /* 🔒 verrouillé */
-  height: 28px;
+  width: 40px;           /* 🔒 verrouillé */
+  height: 40px;
   object-fit: contain;
   transition: transform 0.2s;
-  margin-top: 10px; /* décale le logo vers le bas */
+  margin-top: 3px; /* décale le logo vers le bas */
 }
 .social-icon:hover {
     transform: scale(1.1); /* effet au survol */
