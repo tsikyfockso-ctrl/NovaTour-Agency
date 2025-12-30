@@ -269,6 +269,7 @@ footer {
   object-fit: contain;
   transition: transform 0.2s;
   margin-top: 3px; /* décale le logo vers le bas */
+  align-self: flex-end; /* décale le logo vers le bas par rapport au texte */
 }
 .social-icon:hover {
     transform: scale(1.1); /* effet au survol */
