@@ -180,7 +180,7 @@ footer a:hover {
 .social-icon {
   width: 32px;      /* taille du logo */
   height: 32px;
-  transition: transform 0.3s;
+  transition: transform 0.4s;
 }
 
 .social-icon:hover {
