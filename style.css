@@ -193,5 +193,23 @@ footer img.social-icon {
   max-height: 24px !important;
   display: inline-block !important;
 }
+.facebook-link {
+  display: flex;
+  align-items: center;     /* ALIGNEMENT VERTICAL PARFAIT */
+  gap: 8px;                /* espace logo ↔ texte */
+  text-decoration: none;
+}
+
+.facebook-text {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1;          /* empêche le décalage */
+}
+
+footer img.social-icon {
+  width: 22px !important;
+  height: 22px !important;
+  object-fit: contain;
+}
 
 
