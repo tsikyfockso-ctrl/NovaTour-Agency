@@ -205,6 +205,28 @@ footer img.social-icon {
   font-size: 14px;
   line-height: 1;          /* empêche le décalage */
 }
+.facebook-wrapper a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start;
+  gap: 8px;
+  text-decoration: none;
+}
+
+/* LOGO */
+.facebook-wrapper img {
+  width: 22px !important;
+  height: 22px !important;
+  display: block !important;
+}
+
+/* TEXTE */
+.facebook-wrapper span {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 22px;   /* MÊME HAUTEUR QUE LE LOGO */
+  display: block;
+}
 
 
 
