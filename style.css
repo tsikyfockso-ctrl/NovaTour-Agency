@@ -250,18 +250,28 @@ footer {
   gap: 10px;
   text-decoration: none;
 }
+/* CSS */
+.facebook-follow {
+    display: flex;               /* met le texte et le logo sur la même ligne */
+    align-items: center;         /* aligne verticalement */
+    gap: 10px;                   /* espace entre texte et logo */
+    justify-content: center;     /* centre le bloc horizontalement */
+    margin: 20px 0;
+}
 
+.facebook-text {
+    font-size: 1rem;
+    color: #333;
+}
 .social-icon {
   width: 28px;           /* 🔒 verrouillé */
   height: 28px;
   object-fit: contain;
+  transition: transform 0.2s;
 }
-
-.facebook-text {
-  font-size: 14px;
-  color: #fff;
+.social-icon:hover {
+    transform: scale(1.1); /* effet au survol */
 }
-
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .logo {
