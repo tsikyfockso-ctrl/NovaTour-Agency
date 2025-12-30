@@ -206,10 +206,5 @@ footer img.social-icon {
   line-height: 1;          /* empêche le décalage */
 }
 
-footer img.social-icon {
-  width: 22px !important;
-  height: 22px !important;
-  object-fit: contain;
-}
 
 
