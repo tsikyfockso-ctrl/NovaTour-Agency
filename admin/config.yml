@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Contenu du site"
+    files:
+      - file: "content/home.json"
+        label: "Accueil"
+        name: "home"
+        fields:
+          - { label: "Titre", name: "title", widget: "string" }
+          - { label: "Sous-titre", name: "subtitle", widget: "string" }
+          - { label: "Image principale", name: "image", widget: "image" }
+
+      - file: "content/affiliation.json"
+        label: "Affiliation"
+        name: "affiliation"
+        fields:
+          - { label: "Texte Tiqets", name: "text", widget: "text" }
+          - { label: "Lien Tiqets", name: "link", widget: "string" }
