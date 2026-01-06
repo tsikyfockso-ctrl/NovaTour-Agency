@@ -6,20 +6,12 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "site"
-    label: "Contenu du site"
+  - name: "pages"
+    label: "Pages"
     files:
-      - file: "content/home.json"
-        label: "Accueil"
+      - label: "Accueil"
         name: "home"
+        file: "content/home.json"
         fields:
           - { label: "Titre", name: "title", widget: "string" }
-          - { label: "Sous-titre", name: "subtitle", widget: "string" }
-          - { label: "Image principale", name: "image", widget: "image" }
-
-      - file: "content/affiliation.json"
-        label: "Affiliation"
-        name: "affiliation"
-        fields:
-          - { label: "Texte Tiqets", name: "text", widget: "text" }
-          - { label: "Lien Tiqets", name: "link", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
