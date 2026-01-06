@@ -1,0 +1,160 @@
+---
+layout: default
+title: Novatour Agency
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="Q8d9w5rmxG1wrNWtL1VVXRZyBl9dU8aRxeVXsvMK-BY">
+
+<meta name="description" content="NovaTour Agency – Agence de voyage internationale. Réservation de billets, hôtels, circuits touristiques et services affiliés.">
+<meta name="keywords" content="agence de voyage, réservation billets, hôtels, voyage international, Madagascar">
+<meta name="author" content="NovaTour Agency">
+
+<!-- Open Graph -->
+<meta property="og:title" content="NovaTour Agency – Travel with confidence">
+<meta property="og:description" content="Book flights, hotels and travel packages worldwide.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.png">
+<meta property="og:url" content="https://novatouragency.ddns.net">
+
+<title>NovaTour Agency</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="favicon.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGEBLZGN83"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XGEBLZGN83');
+</script>
+
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+
+    <div class="logo-title">
+      <img src="logo.png" alt="NovaTour Agency Logo" class="logo">
+      <h1>NovaTour Agency</h1>
+    </div>
+
+    <nav class="main-nav">
+      <a href="#home">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#offers">Offres</a>
+      <a href="#booking">Réservation</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="lang-switch">
+      <select onchange="setLang(this.value)">
+        <option value="fr">fr</option>
+        <option value="en">en</option>
+        <option value="mg">es</option>
+        <option value="es">de</option>
+        <option value="de">it</option>
+        <option value="it">pt</option>
+        <option value="pt">zh</option>
+        <option value="zh">ar</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="hero-box">
+    <img src="image.jpg" alt="Travel" class="hero-image">
+    <h2>Voyagez avec confiance</h2>
+    <p>Billets d’avion, hôtels et circuits touristiques internationaux</p>
+    <a href="https://wa.me/261349582764" class="btn">Réserver sur WhatsApp</a>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Nos Services</h2>
+  <div class="services">
+    <div class="card">✈️ Réservation de billets</div>
+    <div class="card">🏨 Hôtels & hébergement</div>
+    <div class="card">🗺️ Circuits touristiques</div>
+    <div class="card">📄 Visa & assistance</div>
+  </div>
+</section>
+
+<section id="offers">
+  <h2>Offres Spéciales</h2>
+  <div class="offers">
+    <div class="card">Antananarivo – Paris</div>
+    <div class="card">Tour Madagascar</div>
+    <div class="card">Dubaï Promo</div>
+  </div>
+</section>
+
+<section id="booking">
+  <h2>Réservation</h2>
+
+  <div class="affiliate-section">
+    <h3>Tiqets</h3>
+    <p class="affiliate-text">
+      Réservez vos activités et visites touristiques facilement, sans file d’attente.
+    </p>
+    <a href="https://tiqets.tpx.lt/QQhsdQ4d" target="_blank" class="btn-booking">
+      Réserver maintenant
+    </a>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>Welcome Pickups</h3>
+    <iframe src="https://tpx.lt/w3XHZ1mv" width="100%" height="380" style="border:none;"></iframe>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Nom" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
+</main>
+
+<footer>
+
+  <div class="facebook-wrapper" class="facebook-follow">
+    <a href="https://www.facebook.com/profile.php?id=61585685797256" target="_blank">
+      <img src="./facebook.png" alt="Facebook" style="width:40px; height:40px; object-fit:contain; class="social-icon">
+      <span class="facebook-text">Suivez-nous sur Facebook</span>
+    </a>
+  </div>
+  <p>📞 +261 34 80 165 21</p>
+  <p>© 2026 NovaTour Agency – Tous droits réservés</p>
+</footer>
+
+<script src="lang.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+
+</body>
+</html>
