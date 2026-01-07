@@ -5,7 +5,7 @@
 <title>CMS NovaTour</title>
 <style>
 body { font-family: Arial; padding: 20px; }
-textarea { width: 100%; height: 300px; }
+textarea { width: 100%; height: 250px; margin-bottom: 10px; }
 #preview { border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
 button { margin-right: 5px; margin-top: 5px; }
 </style>
@@ -27,12 +27,14 @@ button { margin-right: 5px; margin-top: 5px; }
     <option value="offers">Offres</option>
     <option value="booking">Réservation</option>
     <option value="contact">Contact</option>
+    <option value="footer">Footer</option>
   </select>
 
   <br><br>
   <button onclick="addBold()">Gras</button>
   <button onclick="addItalic()">Italique</button>
   <button onclick="addLink()">Lien</button>
+  <button onclick="addImage()">Image</button>
   <br><br>
 
   <textarea id="editor"></textarea><br><br>
