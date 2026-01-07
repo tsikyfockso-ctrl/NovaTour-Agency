@@ -1,4 +1,4 @@
-const PASSWORD = "Nov@tour123!"; // Change ce mot de passe
+const PASSWORD = "Nov@tour123!"; // change le mot de passe
 
 const editor = document.getElementById("editor");
 const preview = document.getElementById("preview");
@@ -30,7 +30,6 @@ function updatePreview() {
   preview.innerHTML = editor.value;
 }
 
-// Fonctions pour formatage simple
 function addBold() { wrapSelection("**"); }
 function addItalic() { wrapSelection("_"); }
 function addLink() {
