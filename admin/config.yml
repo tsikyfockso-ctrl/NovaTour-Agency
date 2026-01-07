@@ -4,13 +4,13 @@ backend:
   branch: main
   auth_scope: repo
 
-media_folder:      # dossier pour stocker les images
-public_folder: ""    # chemin utilisé dans ton site HTML
+media_folder:      # Racine du dépôt
+public_folder: "./"    # chemin utilisé dans mon site HTML
 
 collections:
   - name: "pages"
     label: "Pages"
-    folder: ""              # racine pour les fichiers HTML
+    folder: "./"              # racine pour les fichiers HTML
     create: false
     files:
       - file: "index.html"
