@@ -1,20 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>CMS NovaTour</title>
+<style>
+body { font-family: Arial; padding: 20px; }
+textarea { width: 100%; height: 300px; }
+#preview { border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
+</style>
 </head>
 <body>
 
 <div id="login">
-  <h3>Accès CMS</h3>
+  <h2>Accès CMS</h2>
   <input type="password" id="pwd" placeholder="Mot de passe">
   <button onclick="login()">Entrer</button>
 </div>
 
 <div id="cms" style="display:none;">
-  <h2>Accueil</h2>
-  <textarea id="content" rows="15" cols="80"></textarea><br><br>
+  <h2>Édition du contenu</h2>
+
+  <select id="page" onchange="loadContent()">
+    <option value="home">Accueil</option>
+    <option value="about">À propos</option>
+    <option value="contact">Contact</option>
+  </select>
+
+  <br><br>
+  <button onclick="addBold()">Gras</button>
+  <button onclick="addItalic()">Italique</button>
+  <button onclick="addLink()">Lien</button>
+  <br><br>
+
+  <textarea id="editor"></textarea><br><br>
+
+  <h3>Aperçu :</h3>
+  <div id="preview"></div>
+
+  <br>
   <button onclick="save()">Enregistrer sur GitHub</button>
 </div>
 
