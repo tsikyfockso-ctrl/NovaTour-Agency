@@ -1,4 +1,4 @@
-const PASSWORD = "novatour123";
+const PASSWORD = "Nov@tour123!";
 
 const editor = document.getElementById("editor");
 const preview = document.getElementById("preview");
