@@ -4,8 +4,8 @@ backend:
   branch: main
   auth_scope: repo
 
-media_folder: "images"      # dossier pour stocker les images
-public_folder: "/images"    # chemin utilisé dans ton site HTML
+media_folder:      # dossier pour stocker les images
+public_folder: ""    # chemin utilisé dans ton site HTML
 
 collections:
   - name: "pages"
