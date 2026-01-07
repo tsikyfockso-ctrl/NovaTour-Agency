@@ -1,15 +1,16 @@
 backend:
   name: github
-  repo: tsikyfockso-ctrl/novatouragency # remplace par ton username et repo
+  repo: tsikyfockso-ctrl/Novatour-Agency  # ton GitHub username + repo
   branch: main
+  auth_scope: repo
 
 media_folder: "images"      # dossier pour stocker les images
-public_folder: "/images"    # chemin utilisé dans le site HTML
+public_folder: "/images"    # chemin utilisé dans ton site HTML
 
 collections:
   - name: "pages"
     label: "Pages"
-    folder: ""              # racine du dépôt pour les fichiers HTML
+    folder: ""              # racine pour les fichiers HTML
     create: false
     files:
       - file: "index.html"
