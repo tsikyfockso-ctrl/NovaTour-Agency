@@ -14,14 +14,14 @@
 <meta property="og:title" content="NovaTour Agency – Travel with confidence">
 <meta property="og:description" content="Book flights, hotels and travel packages worldwide.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="logo.png">
-<meta property="og:url" content="https://www.novatouragency.com">
+<meta property="og:image" content="images/logo.png">
+<meta property="og:url" content="https://novatouragency.ddns.net">
 
 <title>NovaTour Agency</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" href="favicon.png">
+<link rel="icon" href="images/favicon.png">
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="style.css">
 
@@ -42,16 +42,18 @@ gtag('config', 'G-XGEBLZGN83');
   <div class="header-container">
 
     <div class="logo-title">
-      <img src="logo.png" alt="NovaTour Agency Logo" class="logo">
+      <img src="images/logo.png" alt="NovaTour Agency Logo" class="logo">
       <h1>NovaTour Agency</h1>
     </div>
 
     <nav class="main-nav">
-      <a href="#home" onclick="loadPage('home')">Accueil</a>
-      <a href="#services" onclick="loadPage('services')">Services</a>
-      <a href="#offers" onclick="loadPage('offers')">Offres</a>
-      <a href="#booking" onclick="loadPage('booking')">Réservation</a>
-      <a href="#contact" onclick="loadPage('contact')">Contact</a>
+      <a href="#home">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#offers">Offres</a>
+      <a href="#booking">Réservation</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <div class="lang-switch">
@@ -71,38 +73,144 @@ gtag('config', 'G-XGEBLZGN83');
   </div>
 </header>
 
-<main id="content">
-  Chargement...
+<main>
+
+<!-- HERO / HOME -->
+<section id="home" class="hero">
+  <div class="hero-box">
+    <img src="images/image.jpg" alt="Travel" class="hero-image">
+    <h2>Voyagez avec confiance</h2>
+    <p>Billets d’avion, hôtels et circuits touristiques internationaux</p>
+    <a href="https://wa.me/261349582764" class="btn">Réserver sur WhatsApp</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Nos Services</h2>
+  <div class="services"></div>
+</section>
+
+<!-- OFFRES -->
+<section id="offers">
+  <h2>Offres Spéciales</h2>
+  <div class="offers"></div>
+</section>
+
+<!-- BOOKING / AFFILIATES -->
+<section id="booking">
+  <h2>Réservation</h2>
+
+  <div class="affiliate-section">
+    <h3 id="affiliate1-name">Tiqets</h3>
+    <p class="affiliate-text"></p>
+    <a href="#" target="_blank" class="btn-booking">Réserver maintenant</a>
+  </div>
+
+  <div class="affiliate-section">
+    <h3>Welcome Pickups</h3>
+    <iframe src="https://tpx.lt/w3XHZ1mv" width="100%" height="380" style="border:none;"></iframe>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section id="destinations">
+  <h2>Destinations</h2>
+  <div id="destinations-list" class="destinations"></div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <h2>Blog</h2>
+  <div id="blog-list" class="blog"></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Nom" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
 </main>
 
-<footer id="footer-content">
-  <!-- Footer sera aussi éditable via /content/footer.html -->
+<!-- FOOTER -->
+<footer>
+
+  <div class="facebook-wrapper">
+    <a href="https://www.facebook.com/profile.php?id=61585685797256" target="_blank">
+      <img src="images/facebook.png" alt="Facebook" class="social-icon">
+      <span class="facebook-text">Suivez-nous sur Facebook</span>
+    </a>
+  </div>
+  <p>📞 +261 34 80 165 21</p>
+  <p>📞 +261 34 95 827 64</p>
+  <p>© 2026 NovaTour Agency – Tous droits réservés</p>
 </footer>
 
+<!-- SCRIPTS -->
 <script src="lang.js"></script>
 <script>
-const sections = ['home','services','offers','booking','contact','footer'];
-
-function loadPage(section){
-  fetch(`content/${section}.html`)
-    .then(r => r.text())
-    .then(html => {
-      if(section === 'footer'){
-        document.getElementById('footer-content').innerHTML = html;
-      } else {
-        document.getElementById('content').innerHTML += html;
-      }
-    });
-}
-
-// Charger toutes les sections
-sections.forEach(loadPage);
-
-// Service Worker
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register('sw.js');
 }
+
+// Récupération contenu dynamique
+fetch("content/content.json").then(r=>r.json()).then(DATA=>{
+  // Home
+  const d = DATA.home.fr;
+  document.querySelector("#home h2").textContent = d.title;
+  document.querySelector("#home p").textContent = d.text;
+  document.querySelector("#home a.btn").href = DATA.links.whatsapp;
+  document.querySelector(".hero-image").src="images/"+DATA.images.hero;
+
+  // Services
+  const s = document.querySelector(".services"); s.innerHTML="";
+  DATA.services.forEach(x=>s.innerHTML+=`<div class="card">${x}</div>`);
+
+  // Offers
+  const o = document.querySelector(".offers"); o.innerHTML="";
+  DATA.offers.forEach(x=>o.innerHTML+=`<div class="card">${x}</div>`);
+
+  // Affiliates
+  document.querySelector(".affiliate-text").textContent = DATA.affiliates[0].text;
+  document.querySelector(".btn-booking").href = DATA.affiliates[0].url;
+
+  // Facebook
+  document.querySelector(".facebook-wrapper a").href = DATA.links.facebook;
+});
+
+// Blog dynamique
+fetch("content/blog.json").then(r=>r.json()).then(b=>{
+  const blogDiv = document.getElementById("blog-list");
+  b.forEach(post=>{
+    blogDiv.innerHTML += `
+      <div class="blog-card">
+        <img src="images/${post.image}" alt="${post.title}">
+        <h3>${post.title}</h3>
+        <small>${post.date}</small>
+        <p>${post.content}</p>
+      </div>`;
+  });
+});
+
+// Destinations dynamique
+fetch("content/destinations.json").then(r=>r.json()).then(d=>{
+  const destDiv = document.getElementById("destinations-list");
+  d.forEach(dest=>{
+    destDiv.innerHTML += `
+      <div class="dest-card">
+        <img src="images/${dest.image}" alt="${dest.name}">
+        <h3>${dest.name}</h3>
+        <p>${dest.description}</p>
+      </div>`;
+  });
+});
 </script>
 
 </body>
-</html>
+      </html>
