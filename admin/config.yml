@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: tsikyfockso-ctrl/novatouragency # remplace par ton username et repo
+  branch: main
+
+media_folder: "images"      # dossier pour stocker les images
+public_folder: "/images"    # chemin utilisé dans le site HTML
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: ""              # racine du dépôt pour les fichiers HTML
+    create: false
+    files:
+      - file: "index.html"
+        label: "Page d'accueil"
+        name: "home"
+        fields:
+          - { label: "Contenu HTML", name: "body", widget: "markdown" }
