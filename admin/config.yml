@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: tsikyfockso-ctrl/NovaTour-Agency  # ton GitHub username + repo
+  repo: tsikyfockso-ctrl/novatouragency  # ton GitHub username + repo
   branch: main
   auth_scope: repo
 
