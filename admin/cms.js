@@ -1,4 +1,4 @@
-const PASSWORD = "Nov@tour123!"; // change le mot de passe
+const PASSWORD = "nov@tour123!"; // Mot de passe CMS
 
 const editor = document.getElementById("editor");
 const preview = document.getElementById("preview");
@@ -34,14 +34,18 @@ function addBold() { wrapSelection("**"); }
 function addItalic() { wrapSelection("_"); }
 function addLink() {
   const url = prompt("URL du lien :");
-  if (url) wrapSelection(`[Lien](${url})`);
+  if (url) wrapSelection(`<a href="${url}">Lien</a>`);
+}
+function addImage() {
+  const url = prompt("URL de l'image :");
+  if (url) wrapSelection(`<img src="${url}" alt="">`);
 }
 
 function wrapSelection(wrapper) {
   const start = editor.selectionStart;
   const end = editor.selectionEnd;
   const text = editor.value;
-  editor.value = text.slice(0, start) + wrapper + text.slice(start, end) + wrapper + text.slice(end);
+  editor.value = text.slice(0,start) + wrapper + text.slice(start,end) + wrapper + text.slice(end);
   updatePreview();
 }
 
