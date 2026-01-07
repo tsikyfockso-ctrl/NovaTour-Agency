@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: tsikyfockso-ctrl/novatour-agency # remplace par ton username et repo
+  repo: tsikyfockso-ctrl/novatouragency # remplace par ton username et repo
   branch: main
 
 media_folder: "images"      # dossier pour stocker les images
