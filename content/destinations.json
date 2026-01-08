@@ -1,3 +1,17 @@
 [
-  {"name":"Nosy Be","description":"Plages paradisiaques et activités nautiques","image":"destination1.jpg"}
+  {
+    "name": "Nosy Be",
+    "description": "Île paradisiaque aux plages magnifiques et activités nautiques.",
+    "image": "destination1.jpg"
+  },
+  {
+    "name": "Paris",
+    "description": "La ville de l’amour et de la culture.",
+    "image": "destination2.jpg"
+  },
+  {
+    "name": "Dubaï",
+    "description": "Ville moderne, luxe et aventures.",
+    "image": "destination3.jpg"
+  }
 ]
