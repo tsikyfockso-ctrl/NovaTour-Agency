@@ -2,51 +2,18 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>NovaTour CMS – Dashboard</title>
+<title>Connexion CMS</title>
 <link rel="stylesheet" href="admin.css">
 </head>
 <body class="admin-body">
 
-<header class="admin-header">
-  <h1>NovaTour CMS</h1>
-  <button onclick="logout()">Déconnexion</button>
-</header>
+<div class="login-box">
+  <h2>NovaTour CMS</h2>
+  <input type="password" id="password" placeholder="Mot de passe">
+  <button onclick="login()">Connexion</button>
+  <p id="error"></p>
+</div>
 
-<main class="admin-grid">
-
-  <div class="admin-card">
-    <h3>Contenu principal</h3>
-    <p>Modifier textes & boutons</p>
-  </div>
-
-  <div class="admin-card">
-    <h3>Images</h3>
-    <p>Gérer les images du site</p>
-  </div>
-
-  <div class="admin-card">
-    <h3>Destinations</h3>
-    <p>Ajouter / modifier destinations</p>
-  </div>
-
-  <div class="admin-card">
-    <h3>Blog</h3>
-    <p>Publier des articles</p>
-  </div>
-
-  <div class="admin-card">
-    <h3>PDF</h3>
-    <p>Générer documents</p>
-  </div>
-
-</main>
-
-<script>
-function logout() {
-  sessionStorage.removeItem("cms-auth");
-  window.location.href = "index.html";
-}
-</script>
-
+<script src="cms.js"></script>
 </body>
 </html>
