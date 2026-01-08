@@ -240,3 +240,17 @@ footer {
     display: none;
   }
 }
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark header,
+body.dark footer {
+  background: #000;
+}
+
+body.dark .card,
+body.dark .affiliate-section {
+  background: #1e1e1e;
+}
