@@ -1,18 +1,22 @@
-const PASSWORD = "nov@tour123!"; // 🔐 change-le
+const CMS_PASSWORD = "nov@tour123!";
 
 function login() {
-  const input = document.getElementById("password").value;
-  const error = document.getElementById("error");
+  const pass = document.getElementById("password").value;
 
-  if (input === PASSWORD) {
+  if (pass === CMS_PASSWORD) {
     sessionStorage.setItem("cms-auth", "ok");
     window.location.href = "dashboard.html";
   } else {
-    error.textContent = "Mot de passe incorrect";
+    document.getElementById("error").innerText = "Mot de passe incorrect";
   }
 }
 
-// Protection dashboard
+function logout() {
+  sessionStorage.removeItem("cms-auth");
+  window.location.href = "index.html";
+}
+
+// Protection automatique
 if (window.location.pathname.includes("dashboard.html")) {
   if (sessionStorage.getItem("cms-auth") !== "ok") {
     window.location.href = "index.html";
