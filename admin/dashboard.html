@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>NovaTour CMS – Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+  <h1>NovaTour CMS</h1>
+  <button onclick="logout()">Déconnexion</button>
+</header>
+
+<main class="admin-grid">
+
+  <div class="admin-card">
+    <h3>Contenu principal</h3>
+    <p>Modifier textes & boutons</p>
+  </div>
+
+  <div class="admin-card">
+    <h3>Images</h3>
+    <p>Gérer les images du site</p>
+  </div>
+
+  <div class="admin-card">
+    <h3>Destinations</h3>
+    <p>Ajouter / modifier destinations</p>
+  </div>
+
+  <div class="admin-card">
+    <h3>Blog</h3>
+    <p>Publier des articles</p>
+  </div>
+
+  <div class="admin-card">
+    <h3>PDF</h3>
+    <p>Générer documents</p>
+  </div>
+
+</main>
+
+<script src="cms.js"></script>
+<script>
+function logout() {
+  sessionStorage.clear();       
+  window.location.replace("index.html");
+}
+
+// Protection dashboard
+if (sessionStorage.getItem("cms-auth") !== "ok") {
+  window.location.replace("index.html");
+}
+</script>
+
+</body>
+</html>
