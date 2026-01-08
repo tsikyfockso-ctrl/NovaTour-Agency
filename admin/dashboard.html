@@ -11,14 +11,31 @@
   <h1>NovaTour CMS</h1>
   <button onclick="logout()">Déconnexion</button>
 </header>
-
 <main class="admin-grid">
-  <div class="admin-card">Destinations</div>
-  <div class="admin-card">Blog</div>
-  <div class="admin-card">Images</div>
-  <div class="admin-card">PDF</div>
-</main>
 
+  <div class="admin-card" onclick="go('destinations.html')">
+    🌍 Destinations
+  </div>
+
+  <div class="admin-card" onclick="go('blog.html')">
+    📝 Blog
+  </div>
+
+  <div class="admin-card" onclick="go('images.html')">
+    🖼️ Images
+  </div>
+
+  <div class="admin-card" onclick="go('pdf.html')">
+    📄 PDF
+  </div>
+
+</main>
+<script src="cms.js"></script>
+<script>
+function go(page) {
+  window.location.href = page;
+}
+</script>
 <script src="cms.js"></script>
 </body>
 </html>
