@@ -1,11 +1,20 @@
-const password="Nov@tour123!"; // mot de passe CMS
-function login(){
-  const p=document.getElementById("pass").value;
-  if(p===password){document.getElementById("cms-interface").style.display="block";}
-  else{alert("Mot de passe incorrect");}
+const PASSWORD = "nov@tour123!"; // 🔐 change-le
+
+function login() {
+  const input = document.getElementById("password").value;
+  const error = document.getElementById("error");
+
+  if (input === PASSWORD) {
+    sessionStorage.setItem("cms-auth", "ok");
+    window.location.href = "dashboard.html";
+  } else {
+    error.textContent = "Mot de passe incorrect";
+  }
 }
-function saveContent(){
-  const data=document.getElementById("content-json").value;
-  console.log("Sauvegarde JSON:",data);
-  alert("Contenu sauvegardé dans la console (simulé pour GitHub Pages)");
+
+// Protection dashboard
+if (window.location.pathname.includes("dashboard.html")) {
+  if (sessionStorage.getItem("cms-auth") !== "ok") {
+    window.location.href = "index.html";
+  }
 }
