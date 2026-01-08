@@ -1,0 +1,9 @@
+{
+  "home":{"fr":{"title":"Voyagez avec confiance","text":"Billets d’avion, hôtels et circuits touristiques internationaux","button":"Réserver sur WhatsApp"},
+  "en":{"title":"Travel with confidence","text":"Flights, hotels and international tours","button":"Book on WhatsApp"}},
+  "services":["✈️ Réservation de billets","🏨 Hôtels & hébergement","🗺️ Circuits touristiques","📄 Visa & assistance"],
+  "offers":["Antananarivo – Paris","Tour Madagascar","Dubaï Promo"],
+  "affiliates":[{"name":"Tiqets","text":"Réservez vos activités touristiques sans file d’attente.","url":"https://tiqets.tpx.lt/QQhsdQ4d"}],
+  "links":{"whatsapp":"https://wa.me/261349582764","facebook":"https://www.facebook.com/profile.php?id=61585685797256"},
+  "images":{"hero":"image.jpg","logo":"logo.png"}
+}
