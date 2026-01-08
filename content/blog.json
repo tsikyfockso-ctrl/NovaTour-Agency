@@ -1,3 +1,14 @@
 [
-  {"title":"Top 10 destinations à Madagascar","date":"2026-01-07","content":"Découvrez les merveilles naturelles et culturelles...","image":"destination1.jpg"}
+  {
+    "title": "Pourquoi passer par une agence de voyage ?",
+    "date": "2026-01-10",
+    "content": "Une agence de voyage vous offre sécurité, gain de temps et assistance complète.",
+    "image": "destination1.jpg"
+  },
+  {
+    "title": "Top 5 destinations en 2026",
+    "date": "2026-01-08",
+    "content": "Découvrez les destinations les plus populaires cette année.",
+    "image": "destination2.jpg"
+  }
 ]
