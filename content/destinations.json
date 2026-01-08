@@ -1,17 +1,46 @@
-[
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Destinations</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header class="admin-header">
+  <h2>Destinations</h2>
+  <button onclick="back()">⬅ Retour</button>
+</header>
+
+<div class="admin-content">
+  <textarea id="data" rows="15" style="width:100%"></textarea>
+  <button onclick="save()">💾 Sauvegarder</button>
+</div>
+
+<script src="cms.js"></script>
+<script>
+protect();
+
+const KEY = "destinations-data";
+
+document.getElementById("data").value =
+  localStorage.getItem(KEY) || `[
   {
     "name": "Nosy Be",
-    "description": "Île paradisiaque aux plages magnifiques et activités nautiques.",
-    "image": "destination1.jpg"
-  },
-  {
-    "name": "Paris",
-    "description": "La ville de l’amour et de la culture.",
-    "image": "destination2.jpg"
-  },
-  {
-    "name": "Dubaï",
-    "description": "Ville moderne, luxe et aventures.",
-    "image": "destination3.jpg"
+    "description": "Île paradisiaque",
+    "image": "images/destination1.jpg"
   }
-]
+]`;
+
+function save() {
+  localStorage.setItem(KEY, document.getElementById("data").value);
+  alert("Destinations enregistrées");
+}
+
+function back() {
+  window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>
