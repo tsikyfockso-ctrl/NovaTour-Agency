@@ -2,17 +2,26 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>CMS NovaTour</title>
-<link rel="stylesheet" href="style.css">
+<title>NovaTour CMS</title>
+<link rel="stylesheet" href="admin.css">
 </head>
 <body>
-<h1>CMS NovaTour Agency</h1>
-<p>Mot de passe: <input type="password" id="pass"/><button onclick="login()">Entrer</button></p>
-<div id="cms-interface" style="display:none;">
-  <h2>Modifier le contenu</h2>
-  <textarea id="content-json" style="width:100%;height:400px;"></textarea><br>
-  <button onclick="saveContent()">Enregistrer</button>
+
+<div class="login">
+  <h2>Admin CMS</h2>
+  <input type="password" id="pass" placeholder="Mot de passe">
+  <button onclick="login()">Entrer</button>
 </div>
-<script src="cms.js"></script>
+
+<script>
+function login() {
+  if (document.getElementById("pass").value === "admin123") {
+    window.location.href = "dashboard.html";
+  } else {
+    alert("Mot de passe incorrect");
+  }
+}
+</script>
+
 </body>
 </html>
