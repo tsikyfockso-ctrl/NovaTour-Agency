@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>NovaTour CMS – Dashboard</title>
+<title>Dashboard CMS</title>
 <link rel="stylesheet" href="admin.css">
 </head>
 <body class="admin-body">
@@ -13,46 +13,12 @@
 </header>
 
 <main class="admin-grid">
-
-  <div class="admin-card">
-    <h3>Contenu principal</h3>
-    <p>Modifier textes & boutons</p>
-  </div>
-
-  <div class="admin-card">
-    <h3>Images</h3>
-    <p>Gérer les images du site</p>
-  </div>
-
-  <div class="admin-card">
-    <h3>Destinations</h3>
-    <p>Ajouter / modifier destinations</p>
-  </div>
-
-  <div class="admin-card">
-    <h3>Blog</h3>
-    <p>Publier des articles</p>
-  </div>
-
-  <div class="admin-card">
-    <h3>PDF</h3>
-    <p>Générer documents</p>
-  </div>
-
+  <div class="admin-card">Destinations</div>
+  <div class="admin-card">Blog</div>
+  <div class="admin-card">Images</div>
+  <div class="admin-card">PDF</div>
 </main>
 
 <script src="cms.js"></script>
-<script>
-function logout() {
-  sessionStorage.clear();       
-  window.location.replace("index.html");
-}
-
-// Protection dashboard
-if (sessionStorage.getItem("cms-auth") !== "ok") {
-  window.location.replace("index.html");
-}
-</script>
-
 </body>
 </html>
