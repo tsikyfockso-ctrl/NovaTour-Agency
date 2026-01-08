@@ -1,43 +1,17 @@
-protect();
-
-const STORAGE_KEY = "destinations-data";
-
-const textarea = document.getElementById("data");
-
-const defaultData = [
+[
   {
-    name: "Nosy Be",
-    description: "Île paradisiaque aux plages magnifiques",
-    image: "images/destination1.jpg"
+    "name": "Nosy Be",
+    "description": "Île paradisiaque aux plages magnifiques",
+    "image": "images/destination1.jpg"
   },
   {
-    name: "Paris",
-    description: "La ville de l’amour et de la culture",
-    image: "images/destination2.jpg"
+    "name": "Paris",
+    "description": "La ville de l’amour et de la culture",
+    "image": "images/destination2.jpg"
   },
   {
-    name: "Dubaï",
-    description: "Ville moderne, luxe et aventures",
-    image: "images/destination3.jpg"
+    "name": "Dubaï",
+    "description": "Ville moderne, luxe et aventures",
+    "image": "images/destination3.jpg"
   }
-];
-
-// Charger données
-textarea.value = localStorage.getItem(STORAGE_KEY)
-  || JSON.stringify(defaultData, null, 2);
-
-// Sauvegarde
-function saveDestinations() {
-  try {
-    JSON.parse(textarea.value); // validation
-    localStorage.setItem(STORAGE_KEY, textarea.value);
-    alert("Destinations enregistrées");
-  } catch (e) {
-    alert("❌ JSON invalide");
-  }
-}
-
-// Retour
-function back() {
-  window.location.href = "dashboard.html";
-}
+]
