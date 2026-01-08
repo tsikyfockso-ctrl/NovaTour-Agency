@@ -1,0 +1,82 @@
+.admin-body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0b3c5d, #1d6fa5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.login-box h2 {
+  margin-bottom: 10px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: #ff9800;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* ===== DASHBOARD ===== */
+
+.admin-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #0b3c5d;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-grid {
+  margin-top: 100px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+.admin-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.admin-card:hover {
+  transform: translateY(-6px);
+}
