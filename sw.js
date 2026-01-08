@@ -18,3 +18,4 @@ self.addEventListener('fetch', event => {
     caches.match(event.request).then(response => response || fetch(event.request))
   );
 });
+document.body.classList.toggle("dark");
