@@ -10,7 +10,7 @@
 <meta property="og:description" content="Book flights, hotels and travel packages worldwide.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="images/logo.png">
-<meta property="og:url" content="https://novatouragency.ddns.net">
+<meta property="og:url" content="https://www.novatouragency.com">
 
 <title>NovaTour Agency</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +34,14 @@ gtag('config', 'G-XGEBLZGN83');
       <img src="images/logo.png" alt="NovaTour Agency Logo" class="logo">
       <h1>NovaTour Agency</h1>
     </div>
+
+    <!-- Bouton hamburger -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <nav class="main-nav">
       <a href="#home">Accueil</a>
       <a href="#services">Services</a>
@@ -43,6 +51,7 @@ gtag('config', 'G-XGEBLZGN83');
       <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
     </nav>
+
     <div class="lang-switch">
       <select onchange="setLang(this.value)">
         <option value="fr">fr</option>
@@ -122,17 +131,13 @@ gtag('config', 'G-XGEBLZGN83');
 <section id="destinations">
   <h2>Destinations</h2>
   <p style="text-align:center; margin-bottom:30px;">Explorez les plus belles destinations du monde et vivez des expériences inoubliables !</p>
-  <div id="destinations-list" class="destinations">
-    <!-- Contenu dynamique -->
-  </div>
+  <div id="destinations-list" class="destinations"></div>
 </section>
 
 <section id="blog">
   <h2>Blog</h2>
   <p style="text-align:center; margin-bottom:30px;">Lisez nos articles pour découvrir des conseils de voyage, astuces et idées d’aventures uniques.</p>
-  <div id="blog-list" class="blog">
-    <!-- Contenu dynamique -->
-  </div>
+  <div id="blog-list" class="blog"></div>
 </section>
 
 <section id="contact">
@@ -160,5 +165,12 @@ gtag('config', 'G-XGEBLZGN83');
 </footer>
 
 <script src="lang.js"></script>
+<script>
+function toggleMenu() {
+  const nav = document.querySelector('.main-nav');
+  nav.classList.toggle('active');
+}
+</script>
+
 </body>
-  </html>
+                                 </html>
