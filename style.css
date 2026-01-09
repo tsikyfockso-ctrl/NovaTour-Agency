@@ -3,8 +3,6 @@
 ========================= */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", Arial, sans-serif; }
 body { background: #f4f6f8; color: #333; line-height: 1.6; }
-
-/* Images responsive */
 img { max-width: 100%; height: auto; display: block; }
 
 /* =========================
@@ -20,6 +18,10 @@ header { background: linear-gradient(135deg, #0b3c5d, #1d6fa5); position: sticky
 
 /* Language */
 .lang-switch select { padding: 6px 10px; border-radius: 6px; border: none; }
+
+/* Hamburger button */
+.menu-toggle { display: none; flex-direction: column; justify-content: space-between; width: 30px; height: 22px; cursor: pointer; }
+.menu-toggle span { display: block; height: 4px; background: #fff; border-radius: 2px; }
 
 /* =========================
    HERO
@@ -76,35 +78,30 @@ footer { background: #0b3c5d; color: white; padding: 40px 20px; text-align: cent
    RESPONSIVE MOBILE
 ========================= */
 @media (max-width: 768px) {
-  .header-container { flex-direction: column; gap: 15px; text-align: center; }
-
+  /* Header vertical */
+  .header-container { flex-direction: column; align-items: center; gap: 15px; }
   .logo { max-width: 50px; }
   .logo-title h1 { font-size: 20px; }
 
-  /* Menu vertical sur mobile */
-  .main-nav {
-    display: flex;
-    flex-direction: column;  /* vertical */
-    gap: 10px;               /* espace entre les liens */
-    width: 100%;             /* occupe toute la largeur */
-    align-items: center;     /* centre les liens horizontalement */
-  }
+  /* Hamburger bouton visible */
+  .menu-toggle { display: flex; }
 
-  .main-nav a {
-    margin-left: 0;          /* supprime l'espace horizontal du desktop */
-    font-size: 18px;
-    display: block;
-    width: auto;
-  }
+  /* Menu caché par défaut, vertical */
+  .main-nav { display: none; flex-direction: column; width: 100%; background: #0b3c5d; position: absolute; top: 70px; left: 0; padding: 10px 0; text-align: center; }
+  .main-nav.active { display: flex; }
+  .main-nav a { margin: 10px 0; font-size: 18px; color: #fff; display: block; }
 
+  /* Hero et boutons responsive */
   .hero { padding: 80px 15px; }
   .hero h2 { font-size: 26px; }
   .hero p { font-size: 16px; }
   .btn, .btn-booking, button { width: 100%; padding: 14px; font-size: 18px; }
+
   section { padding: 50px 15px; }
   section h2 { font-size: 24px; }
   .affiliate-section { padding: 20px; margin: 20px 10px; }
   .card img { height: auto; }
+
   .facebook-wrapper a { flex-direction: column; }
 }
 
