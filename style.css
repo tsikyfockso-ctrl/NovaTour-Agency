@@ -40,8 +40,10 @@ header {
 }
 
 .logo {
-  width: 70px;
   height: auto;
+  width: auto;
+  max-width: 70px;
+}
 }
 
 .logo-title h1 {
