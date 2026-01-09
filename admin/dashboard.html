@@ -5,37 +5,19 @@
 <title>Dashboard CMS</title>
 <link rel="stylesheet" href="admin.css">
 </head>
-<body class="admin-body">
+<body onload="protect()">
 
-<header class="admin-header">
-  <h1>NovaTour CMS</h1>
-  <button onclick="logout()">Déconnexion</button>
+<header>
+  <h2>Dashboard CMS</h2>
+  <button onclick="sessionStorage.removeItem('cms-auth'); window.location.href='index.html'">Déconnexion</button>
 </header>
-<main class="admin-grid">
 
-  <div class="admin-card" onclick="go('destinations.html')">
-    🌍 Destinations
-  </div>
+<nav class="cms-menu">
+  <a href="destinations.html">Destinations</a>
+  <a href="blog.html">Blog</a>
+  <a href="images.html">Images</a>
+</nav>
 
-  <div class="admin-card" onclick="go('blog.html')">
-    📝 Blog
-  </div>
-
-  <div class="admin-card" onclick="go('images.html')">
-    🖼️ Images
-  </div>
-
-  <div class="admin-card" onclick="go('pdf.html')">
-    📄 PDF
-  </div>
-
-</main>
-<script src="cms.js"></script>
-<script>
-function go(page) {
-  window.location.href = page;
-}
-</script>
-<script src="cms.js"></script>
 </body>
+<script src="cms.js"></script>
 </html>
