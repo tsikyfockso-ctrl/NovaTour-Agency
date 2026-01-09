@@ -14,6 +14,13 @@ body {
   line-height: 1.6;
 }
 
+/* Images responsive (IMPORTANT) */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* =========================
    HEADER
 ========================= */
@@ -33,6 +40,7 @@ header {
   justify-content: space-between;
 }
 
+/* Logo + titre */
 .logo-title {
   display: flex;
   align-items: center;
@@ -40,10 +48,8 @@ header {
 }
 
 .logo {
-  height: auto;
   width: auto;
   max-width: 70px;
-}
 }
 
 .logo-title h1 {
@@ -51,6 +57,7 @@ header {
   font-size: 26px;
 }
 
+/* Navigation */
 .main-nav a {
   color: #fff;
   margin-left: 20px;
@@ -102,7 +109,7 @@ header {
 button {
   background: #ff9800;
   color: white;
-  padding: 5px 10px;
+  padding: 12px 20px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
@@ -159,6 +166,14 @@ section h2 {
   box-shadow: 0 18px 40px rgba(0,0,0,0.15);
 }
 
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
 /* =========================
    AFFILIATES
 ========================= */
@@ -169,6 +184,11 @@ section h2 {
   padding: 30px;
   border-radius: 18px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Texte en gras corrigé */
+.grassb {
+  font-weight: bold;
 }
 
 /* =========================
@@ -210,8 +230,7 @@ footer {
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
+  max-width: 40px;
 }
 
 /* =========================
@@ -223,106 +242,22 @@ footer {
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE MOBILE
 ========================= */
-@media (max-width: 768px) {
-  .logo {
-    width: 55px;
-  }
-
-  .logo-title h1 {
-    font-size: 20px;
-  }
-
-  .hero h2 {
-    font-size: 30px;
-  }
-
-  .main-nav {
-    display: none;
-  }
-}
-body.dark {
-  background: #121212;
-  color: #e0e0e0;
-}
-
-body.dark header,
-body.dark footer {
-  background: #000;
-}
-
-body.dark .card,
-body.dark .affiliate-section {
-  background: #1e1e1e;
-}
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* =========================
-   DESTINATIONS & BLOG TEXT
-========================= */
-
-.card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-  color: #0b3c5d;
-}
-
-.card p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-/* Image dans les cartes */
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-/* Texte sous le titre de section */
-section > p {
-  max-width: 800px;
-  margin: -20px auto 40px;
-  text-align: center;
-  font-size: 18px;
-  color: #666;
-}
-
-/* Dark mode (si activé) */
-body.dark .card h3 {
-  color: #ff9800;
-}
-
-body.dark .card p {
-  color: #ccc;
-}
-/* =========================
-   MOBILE FIXES
-========================= */
-
-.grassb {
-  font-weight: bold;
-}
-
 @media (max-width: 768px) {
 
   .header-container {
     flex-direction: column;
     gap: 15px;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 50px;
+  }
+
+  .logo-title h1 {
+    font-size: 20px;
   }
 
   .main-nav {
@@ -351,11 +286,9 @@ body.dark .card p {
   .btn,
   .btn-booking,
   button {
-    display: block;
     width: 100%;
     padding: 14px;
     font-size: 18px;
-    text-align: center;
   }
 
   section {
@@ -371,7 +304,29 @@ body.dark .card p {
     margin: 20px 10px;
   }
 
+  .card img {
+    height: auto;
+  }
+
   .facebook-wrapper a {
     flex-direction: column;
   }
+}
+
+/* =========================
+   DARK MODE
+========================= */
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark header,
+body.dark footer {
+  background: #000;
+}
+
+body.dark .card,
+body.dark .affiliate-section {
+  background: #1e1e1e;
 }
