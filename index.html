@@ -125,57 +125,7 @@ gtag('config', 'G-XGEBLZGN83');
   <p>📞 +261 34 95 827 64</p>
   <p>© 2026 NovaTour Agency – Tous droits réservés</p>
 </footer>
-
 <script src="lang.js"></script>
-<script>
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('sw.js');
-}
-
-// Contenu dynamique
-fetch("content/content.json").then(r=>r.json()).then(DATA=>{
-  const d = DATA.home.fr;
-  document.querySelector("#home h2").textContent=d.title;
-  document.querySelector("#home p").textContent=d.text;
-  document.querySelector("#home a.btn").href=DATA.links.whatsapp;
-  document.querySelector(".hero-image").src="images/"+DATA.images.hero;
-
-  const s=document.querySelector(".services"); s.innerHTML="";
-  DATA.services.forEach(x=>s.innerHTML+=`<div class="card">${x}</div>`);
-
-  const o=document.querySelector(".offers"); o.innerHTML="";
-  DATA.offers.forEach(x=>o.innerHTML+=`<div class="card">${x}</div>`);
-
-  document.querySelector(".affiliate-text").textContent=DATA.affiliates[0].text;
-  document.querySelector(".btn-booking").href=DATA.affiliates[0].url;
-
-  document.querySelector(".facebook-wrapper a").href=DATA.links.facebook;
-});
-
-fetch("content/blog.json").then(r=>r.json()).then(b=>{
-  const blogDiv=document.getElementById("blog-list");
-  b.forEach(post=>{
-    blogDiv.innerHTML+=`
-    <div class="blog-card">
-      <img src="images/${post.image}" alt="${post.title}">
-      <h3>${post.title}</h3>
-      <small>${post.date}</small>
-      <p>${post.content}</p>
-    </div>`;
-  });
-});
-
-fetch("content/destinations.json").then(r=>r.json()).then(d=>{
-  const destDiv=document.getElementById("destinations-list");
-  d.forEach(dest=>{
-    destDiv.innerHTML+=`
-    <div class="dest-card">
-      <img src="images/${dest.image}" alt="${dest.name}">
-      <h3>${dest.name}</h3>
-      <p>${dest.description}</p>
-    </div>`;
-  });
-});
 </script>
 </body>
 </html>
