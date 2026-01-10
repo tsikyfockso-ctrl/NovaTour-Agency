@@ -26,10 +26,29 @@ header { background: linear-gradient(135deg, #0b3c5d, #1d6fa5); position: sticky
 /* =========================
    HERO
 ========================= */
-.hero { background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("images/image.jpg") center/cover no-repeat; color: white; text-align: center; padding: 130px 20px; animation: fadeIn 1.2s ease; }
-.hero h2 { font-size: 42px; margin-bottom: 15px; }
-.hero p { font-size: 20px; margin-bottom: 30px; }
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url("images/image.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 130px 20px;
+  animation: fadeIn 1.2s ease;
+}
 
+/* Supprimer l’image interne */
+.hero-image {
+  display: none;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
 /* =========================
    BUTTONS
 ========================= */
