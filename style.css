@@ -85,9 +85,8 @@ input, textarea { padding: 14px; border-radius: 10px; border: 1px solid #ccc; }
    FOOTER
 ========================= */
 footer { background: #0b3c5d; color: white; padding: 40px 20px; text-align: center; }
-.facebook-wrapper { display: flex; justify-content: center; align-items: center; gap: 10px; color: white; text-decoration: none; margin-bottom: 10px; }
+.facebook-wrapper a { display: flex; justify-content: center; align-items: center; gap: 10px; color: white; text-decoration: none; margin-bottom: 10px; }
 .social-icon { max-width: 40px; }
-.facebook-text { font-size: 16px; }
 
 /* =========================
    ANIMATIONS
