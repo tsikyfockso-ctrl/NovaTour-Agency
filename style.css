@@ -86,7 +86,6 @@ input, textarea { padding: 14px; border-radius: 10px; border: 1px solid #ccc; }
 ========================= */
 footer { background: #0b3c5d; color: white; padding: 40px 20px; text-align: center; }
 .facebook-wrapper { display: flex; justify-content: center; align-items: center; gap: 10px; color: white; text-decoration: none; margin-bottom: 10px; }
-.facebook-wrapper a { display: flex; justify-content: center; align-items: center; gap: 12px; color: white; text-decoration: none; margin-bottom: 20px; }
 .social-icon { max-width: 40px; }
 
 /* =========================
@@ -131,3 +130,4 @@ footer { background: #0b3c5d; color: white; padding: 40px 20px; text-align: cent
 body.dark { background: #121212; color: #e0e0e0; }
 body.dark header, body.dark footer { background: #000; }
 body.dark .card, body.dark .affiliate-section { background: #1e1e1e; }
+.facebook-text{font-size: 16px; }
