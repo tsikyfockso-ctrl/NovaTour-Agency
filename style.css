@@ -44,7 +44,10 @@ header { background: linear-gradient(135deg, #0b3c5d, #1d6fa5); position: sticky
   font-size: 42px;
   margin-bottom: 15px;
 }
-
+.hero h7 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
 .hero p {
   font-size: 20px;
   margin-bottom: 30px;
@@ -120,11 +123,13 @@ footer { background: #0b3c5d; color: white; padding: 40px 20px; text-align: cent
   /* Hero et boutons responsive */
   .hero { padding: 80px 15px; }
   .hero h2 { font-size: 26px; }
+  .hero h7 { font-size: 26px; }
   .hero p { font-size: 16px; }
   .btn, .btn-booking, button { width: 100%; padding: 14px; font-size: 18px; }
 
   section { padding: 50px 15px; }
   section h2 { font-size: 24px; }
+  section h7 { font-size: 24px; }
   .affiliate-section { padding: 20px; margin: 20px 10px; }
   .card img { height: auto; }
 
