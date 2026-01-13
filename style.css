@@ -59,7 +59,7 @@ header { background: linear-gradient(135deg, #0b3c5d, #1d6fa5); position: sticky
    SECTIONS
 ========================= */
 section { padding: 80px 20px; }
-section h2 { text-align: center; font-size: 32px; margin-bottom: 45px; color: #0b3c5d; }
+section h2 { text-align: center; font-size: 32px; margin-bottom: 45px; color: #ffffff; }
 
 /* =========================
    SERVICES & OFFERS
