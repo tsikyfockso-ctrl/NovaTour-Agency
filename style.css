@@ -56,10 +56,17 @@ header { background: linear-gradient(135deg, #0b3c5d, #1d6fa5); position: sticky
 .btn:hover, .btn-booking:hover, button:hover { background: #e68900; transform: translateY(-2px); }
 
 /* =========================
-   SECTIONS
+   SECTIONS 1
 ========================= */
 section { padding: 80px 20px; }
 section h2 { text-align: center; font-size: 32px; margin-bottom: 45px; color: #ffffff; }
+
+/* =========================
+   SECTIONS 2
+========================= */
+section { padding: 80px 20px; }
+section h7 { text-align: center; font-size: 32px; margin-bottom: 45px; color: #000000; }
+
 
 /* =========================
    SERVICES & OFFERS
