@@ -131,33 +131,31 @@ body.dark header, body.dark footer { background: #000; }
 body.dark .card, body.dark .affiliate-section { background: #1e1e1e; }
 
 .klook-features {
-  display: block;               /* active le flex pour alignement horizontal */
-  flex-wrap: wrap;             /* permet de passer à la ligne si l'espace est trop petit */
-  gap: 20px;                   /* espace entre chaque feature */
-  margin: 20px 0;              /* marge autour du bloc */
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
 }
 
 .klook-features span {
-  display: inline-block;               /* permet d’aligner icône et texte */
-  align-items: center;         /* centre verticalement l'icône et le texte */
-  background-color: #f0f8ff;  /* couleur douce de fond pour chaque feature */
-  padding: 8px 12px;           /* espace à l'intérieur du span */
-  border-radius: 8px;          /* coins arrondis */
-  font-size: 16px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* légère ombre pour relief */
+  display: inline-flex;
+  align-items: center;
+  background-color: #f0f8ff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .klook-features span::before {
-  content: "✔️";               /* icône au début du texte */
-  margin-right: 8px;           /* espace entre icône et texte */
+  content: "✔️";
+  margin-right: 8px;
 }
 
-/* Responsive pour petits écrans */
+/* Mobile */
 @media (max-width: 600px) {
   .klook-features {
-    flex-direction: column;    /* empile verticalement sur mobile */
-    gap: 10px;
+    flex-direction: column;
   }
 }
 
