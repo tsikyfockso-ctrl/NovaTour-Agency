@@ -130,20 +130,36 @@ footer { background: #0b3c5d; color: white; padding: 40px 20px; text-align: cent
 body.dark { background: #121212; color: #e0e0e0; }
 body.dark header, body.dark footer { background: #000; }
 body.dark .card, body.dark .affiliate-section { background: #1e1e1e; }
-/* =========================
-   ALIGNMENT MODE
-========================= */
-.klook-features span {
-  display: flex;
-  justify-content: center;   /* centre horizontalement */
-  align-items: center;       /* aligne verticalement */
-  gap: 20px;                 /* espace entre les éléments */
-  flex-wrap: wrap;           /* IMPORTANT : retour à la ligne sur mobile */
-  margin-top: 20px;
+
+.klook-features {
+  display: flex;               /* active le flex pour alignement horizontal */
+  flex-wrap: wrap;             /* permet de passer à la ligne si l'espace est trop petit */
+  gap: 20px;                   /* espace entre chaque feature */
+  margin: 20px 0;              /* marge autour du bloc */
+  font-family: Arial, sans-serif;
 }
 
 .klook-features span {
-  white-space: nowrap;       /* empêche la coupure bizarre du texte */
-  font-size: 15px;
+  display: flex;               /* permet d’aligner icône et texte */
+  align-items: center;         /* centre verticalement l'icône et le texte */
+  background-color: #f0f8ff;  /* couleur douce de fond pour chaque feature */
+  padding: 8px 12px;           /* espace à l'intérieur du span */
+  border-radius: 8px;          /* coins arrondis */
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* légère ombre pour relief */
 }
+
+.klook-features span::before {
+  content: "✔️";               /* icône au début du texte */
+  margin-right: 8px;           /* espace entre icône et texte */
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 600px) {
+  .klook-features {
+    flex-direction: column;    /* empile verticalement sur mobile */
+    gap: 10px;
+  }
+}
+
 
