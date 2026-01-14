@@ -128,10 +128,10 @@ footer { background: #0b3c5d; color: white; padding: 40px 20px; text-align: cent
 ========================= */
 body.dark { background: #121212; color: #e0e0e0; }
 body.dark header, body.dark footer { background: #000; }
-body.dark .card, .card1, body.dark .affiliate-section { background: #1e1e1e; }
+body.dark .card, body.dark .affiliate-section { background: #1e1e1e; }
 
 .klook-features {
-  display: flex;               /* active le flex pour alignement horizontal */
+  display: block;               /* active le flex pour alignement horizontal */
   flex-wrap: wrap;             /* permet de passer à la ligne si l'espace est trop petit */
   gap: 20px;                   /* espace entre chaque feature */
   margin: 20px 0;              /* marge autour du bloc */
@@ -139,7 +139,7 @@ body.dark .card, .card1, body.dark .affiliate-section { background: #1e1e1e; }
 }
 
 .klook-features span {
-  display: inline-flex;               /* permet d’aligner icône et texte */
+  display: inline-block;               /* permet d’aligner icône et texte */
   align-items: center;         /* centre verticalement l'icône et le texte */
   background-color: #f0f8ff;  /* couleur douce de fond pour chaque feature */
   padding: 8px 12px;           /* espace à l'intérieur du span */
