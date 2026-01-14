@@ -133,7 +133,7 @@ body.dark .card, body.dark .affiliate-section { background: #1e1e1e; }
 /* =========================
    ALIGNMENT MODE
 ========================= */
-.klook-features {
+.klook-features span {
   display: flex;
   justify-content: center;   /* centre horizontalement */
   align-items: center;       /* aligne verticalement */
