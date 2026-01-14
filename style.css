@@ -130,3 +130,20 @@ footer { background: #0b3c5d; color: white; padding: 40px 20px; text-align: cent
 body.dark { background: #121212; color: #e0e0e0; }
 body.dark header, body.dark footer { background: #000; }
 body.dark .card, body.dark .affiliate-section { background: #1e1e1e; }
+/* =========================
+   ALIGNMENT MODE
+========================= */
+.klook-features {
+  display: flex;
+  justify-content: center;   /* centre horizontalement */
+  align-items: center;       /* aligne verticalement */
+  gap: 20px;                 /* espace entre les éléments */
+  flex-wrap: wrap;           /* IMPORTANT : retour à la ligne sur mobile */
+  margin-top: 20px;
+}
+
+.klook-features span {
+  white-space: nowrap;       /* empêche la coupure bizarre du texte */
+  font-size: 15px;
+}
+
